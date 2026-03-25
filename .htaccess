@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase /api-hikashop/
+
+# /api/products/123 → api.php?resource=products&id=123
+RewriteRule ^([a-zA-Z0-9_-]+)/?([0-9]+)?$ api.php?resource=$1&id=$2 [L,QSA]
